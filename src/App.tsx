@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Characters from './components/Characters';
+import Episodes from './components/Episodes';
+import Layout from './components/Layout';
+import Locations from './components/Locations';
 
 function App() {
+
+  const [section, setSection] = useState<string>('characters');
+
+  const changeView = (view: string) => setSection(view);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <div className="tabs is-toggle is-centered">
+        <ul>          
+          <li
+            onClick={ () => changeView('characters') } 
+            className={section === 'characters' ? "is-active" : ''}>
+            <a href="#section">Characters</a></li>
+          <li 
+            onClick={ () => changeView('locations') } 
+            className={section === 'locations' ? "is-active" : ''}>
+            <a href="#section">Locations</a></li>
+          <li 
+            onClick={ () => changeView('episodes') } 
+            className={section === 'episodes' ? "is-active" : ''}>
+            <a href="#section">Episodes</a></li>          
+        </ul>
+      </div>
+      { section === 'characters' && <Characters /> }
+      { section === 'episodes' && <Episodes /> }
+      { section === 'locations' && <Locations /> }
+    </Layout>
   );
 }
 
