@@ -1,6 +1,6 @@
 import React, { FC, Fragment, SyntheticEvent, useState } from 'react'
 import useCharacter from '../hooks/useCharacter'
-import { Character } from '../shared/Character'
+import { Character } from '../types/Character'
 import EpisodeItem from './EpisodeItem'
 
 type Props = {

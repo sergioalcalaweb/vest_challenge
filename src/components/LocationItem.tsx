@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import useLocation from '../hooks/useLocation'
-import { Location } from '../shared/Location'
+import { Location } from '../types/Location'
 import CharacterItem from './CharacterItem'
 
 

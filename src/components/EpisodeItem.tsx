@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Episode } from '../shared/Episode'
+import { Episode } from '../types/Episode'
 
 
 type Props = {

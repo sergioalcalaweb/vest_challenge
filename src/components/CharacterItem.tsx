@@ -1,5 +1,5 @@
 import React, { FC, Fragment, useState } from 'react'
-import { Character } from '../shared/Character'
+import { Character } from '../types/Character'
 import CharacterDetail from './CharacterDetail'
 
 

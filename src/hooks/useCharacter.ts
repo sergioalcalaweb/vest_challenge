@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Character } from '../shared/Character';
-import { Location } from '../shared/Location';
-import { Episode } from '../shared/Episode';
+import { Character } from '../types/Character';
+import { Location } from '../types/Location';
+import { Episode } from '../types/Episode';
 
 
 type Detail = {
